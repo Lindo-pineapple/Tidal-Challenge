@@ -6,10 +6,27 @@
  */
 
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
+
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  customText: {
+    color: 'black',
+    fontSize: 30,
+    fontFamily: 'AvenirLTProRoman',
+  },
+});
 
 function App(): React.JSX.Element {
-  return <Text>Hello Lindo To React Native</Text>;
+  return (
+    <View style={styles.main}>
+      <Text>Hello Lindo To React Native</Text>
+    </View>
+  );
 }
 
 export default App;
