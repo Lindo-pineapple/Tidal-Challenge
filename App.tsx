@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import IconButton from './src/components/IconButton';
 
 const styles = StyleSheet.create({
   main: {
@@ -26,14 +26,6 @@ const styles = StyleSheet.create({
     fontFamily: 'AvenirLTProRoman',
   },
 });
-
-function IconButton(props: {iconName: string; color?: string}) {
-  return (
-    <View style={styles.buttonStyles} testID={'navigateBack'}>
-      <Icon name={props.iconName} size={50} color={props.color} />
-    </View>
-  );
-}
 
 export default function App() {
   return (
