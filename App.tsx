@@ -1,9 +1,6 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-const Tab = createBottomTabNavigator();
+import {View, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const styles = StyleSheet.create({
   main: {
@@ -12,28 +9,50 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'black',
   },
+  buttonStyles: {
+    flexDirection: 'row',
+    alignContent: 'space-evenly',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'black',
+    height: 60,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+  },
   customText: {
     color: 'teal',
-    fontSize: 30,
+    fontSize: 50,
     fontFamily: 'AvenirLTProRoman',
   },
 });
 
-function DummyFumc() {
+function IconButton(props: {iconName: string; color?: string}) {
   return (
-    <View style={styles.main}>
-      <Text style={styles.customText}>Hello Lindo To React Native</Text>
+    <View style={styles.buttonStyles} testID={'navigateBack'}>
+      <Icon name={props.iconName} size={50} color={props.color} />
     </View>
   );
 }
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={DummyFumc} />
-        <Tab.Screen name="Settings" component={DummyFumc} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View
+      style={[
+        styles.container,
+        {
+          flexDirection: 'column',
+        },
+      ]}>
+      <View style={{flex: 1, backgroundColor: 'black'}} />
+      <View style={{flex: 2, backgroundColor: 'white'}} />
+      <View style={styles.buttonStyles}>
+        <IconButton iconName="home-variant-outline" color="teal" />
+        <IconButton iconName="youtube" color="grey" />
+        <IconButton iconName="magnify" color="grey" />
+        <IconButton iconName="chart-bar" color="grey" />
+        <IconButton iconName="account-circle-outline" color="grey" />
+      </View>
+    </View>
   );
 }
