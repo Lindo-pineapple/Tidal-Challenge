@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import IconButton from './src/components/IconButton';
+import MediaPlayerBar from './src/components/MediaPlayerBar';
 
 const styles = StyleSheet.create({
   main: {
@@ -9,12 +10,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'black',
   },
-  buttonStyles: {
+  navStyles: {
     flexDirection: 'row',
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     height: 80,
+    margin: 10,
+  },
+  mediaPlayer: {
+    flexDirection: 'row',
+    alignContent: 'space-evenly',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white',
+    height: 60,
     margin: 10,
   },
   container: {
@@ -23,7 +32,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   customText: {
-    color: 'teal',
+    color: 'white',
     fontSize: 50,
     fontFamily: 'AvenirLTProRoman',
   },
@@ -32,14 +41,16 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={[styles.container]}>
-      <View style={{flex: 1, backgroundColor: 'black'}} />
-      <View style={{flex: 2, backgroundColor: 'white'}} />
-      <View style={styles.buttonStyles}>
-        <IconButton iconName="home-variant-outline" color="teal" />
-        <IconButton iconName="youtube" color="grey" />
-        <IconButton iconName="magnify" color="grey" />
-        <IconButton iconName="chart-bar" color="grey" />
-        <IconButton iconName="account-circle-outline" color="grey" />
+      <View style={{flex: 2, backgroundColor: 'black'}} />
+      <View style={styles.mediaPlayer}>
+        <MediaPlayerBar />
+      </View>
+      <View style={styles.navStyles}>
+        <IconButton iconName="home-variant-outline" size={45} color="teal" />
+        <IconButton iconName="youtube" size={45} color="grey" />
+        <IconButton iconName="magnify" size={45} color="grey" />
+        <IconButton iconName="chart-bar" size={45} color="grey" />
+        <IconButton iconName="account-circle-outline" size={45} color="grey" />
       </View>
     </View>
   );

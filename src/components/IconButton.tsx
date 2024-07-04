@@ -13,10 +13,14 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function IconButton(props: {iconName: string; color?: string}) {
+export default function IconButton(props: {
+  iconName: string;
+  color?: string;
+  size: number;
+}) {
   return (
     <View style={styles.buttonStyles}>
-      <Icon name={props.iconName} size={50} color={props.color} />
+      <Icon name={props.iconName} size={props.size} color={props.color} />
     </View>
   );
 }
