@@ -5,6 +5,7 @@ import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
 import AlbumOptionsBar from './src/components/AlbumOptionBar';
 import PlayShuffleButtons from './src/components/PlayShuffleButtons';
+import AlbumDetails from './src/components/AlbumDetails';
 
 const styles = StyleSheet.create({
   main: {
@@ -18,16 +19,7 @@ const styles = StyleSheet.create({
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
-    height: 80,
-    margin: 10,
-  },
-  mediaPlayer: {
-    flexDirection: 'row',
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'white',
-    height: 60,
-    margin: 10,
+    height: 50,
   },
   container: {
     flex: 1,
@@ -44,13 +36,13 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <SafeAreaView style={[styles.container]}>
-      <View style={{flex: 2, backgroundColor: 'black'}} />
+      <View style={{flex: 2, backgroundColor: 'black'}}>
+        <AlbumDetails />
+      </View>
       <PlayShuffleButtons />
       <AlbumOptionsBar />
       <SongList />
-      <SafeAreaView style={styles.mediaPlayer}>
-        <MediaPlayerBar />
-      </SafeAreaView>
+      <MediaPlayerBar />
       <SafeAreaView style={styles.navStyles}>
         <IconButton iconName="home-variant-outline" size={45} color="teal" />
         <IconButton iconName="youtube" size={45} color="grey" />

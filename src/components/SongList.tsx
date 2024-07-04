@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     width: '100%',
+    bottom: 20,
   },
   row: {
     flexDirection: 'row',
@@ -22,23 +23,22 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    padding: 20,
+    padding: 10,
   },
   songText: {
     color: 'white',
-    fontSize: 25,
+    fontSize: 20,
     fontFamily: 'AvenirLTProRoman',
     top: 5,
   },
   artistText: {
     color: 'grey',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
     top: 5,
   },
   options: {
-    right: 20,
     top: 20,
   },
 });
