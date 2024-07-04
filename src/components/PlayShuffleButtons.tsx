@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     height: 80,
-    bottom: 20,
+    bottom: 10,
   },
   buttonPlay: {
     paddingTop: 10,
