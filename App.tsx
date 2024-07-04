@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
+import SongList from './src/components/SongList';
 
 const styles = StyleSheet.create({
   main: {
@@ -42,6 +43,7 @@ export default function App() {
   return (
     <View style={[styles.container]}>
       <View style={{flex: 2, backgroundColor: 'black'}} />
+      <SongList />
       <View style={styles.mediaPlayer}>
         <MediaPlayerBar />
       </View>
