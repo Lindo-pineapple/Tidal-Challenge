@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
-    backgroundColor: 'black',
     height: 60,
     margin: 10,
     bottom: 10,

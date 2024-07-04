@@ -4,6 +4,7 @@ import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
 import AlbumOptionsBar from './src/components/AlbumOptionBar';
+import PlayShuffleButtons from './src/components/PlayShuffleButtons';
 
 const styles = StyleSheet.create({
   main: {
@@ -44,6 +45,7 @@ export default function App() {
   return (
     <SafeAreaView style={[styles.container]}>
       <View style={{flex: 2, backgroundColor: 'black'}} />
+      <PlayShuffleButtons />
       <AlbumOptionsBar />
       <SongList />
       <SafeAreaView style={styles.mediaPlayer}>
