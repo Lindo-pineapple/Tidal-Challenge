@@ -10,9 +10,11 @@ import AlbumDetails from './src/components/AlbumDetails';
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    alignContent: 'space-evenly',
+    justifyContent: 'space-evenly',
     backgroundColor: 'black',
+    width: '100%',
+    height: '100%',
   },
   navStyles: {
     flexDirection: 'row',
@@ -20,11 +22,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     height: 50,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    flexDirection: 'column',
   },
   customText: {
     color: 'white',
@@ -35,7 +32,7 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <SafeAreaView style={[styles.container]}>
+    <SafeAreaView style={[styles.main]}>
       <View style={{flex: 2, backgroundColor: 'black'}}>
         <AlbumDetails />
       </View>
