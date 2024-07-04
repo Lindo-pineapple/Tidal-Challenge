@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, SafeAreaView} from 'react-native';
 import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
+import AlbumOptionsBar from './src/components/AlbumOptionBar';
 
 const styles = StyleSheet.create({
   main: {
@@ -41,19 +42,20 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <View style={[styles.container]}>
+    <SafeAreaView style={[styles.container]}>
       <View style={{flex: 2, backgroundColor: 'black'}} />
+      <AlbumOptionsBar />
       <SongList />
-      <View style={styles.mediaPlayer}>
+      <SafeAreaView style={styles.mediaPlayer}>
         <MediaPlayerBar />
-      </View>
-      <View style={styles.navStyles}>
+      </SafeAreaView>
+      <SafeAreaView style={styles.navStyles}>
         <IconButton iconName="home-variant-outline" size={45} color="teal" />
         <IconButton iconName="youtube" size={45} color="grey" />
         <IconButton iconName="magnify" size={45} color="grey" />
         <IconButton iconName="chart-bar" size={45} color="grey" />
         <IconButton iconName="account-circle-outline" size={45} color="grey" />
-      </View>
-    </View>
+      </SafeAreaView>
+    </SafeAreaView>
   );
 }
