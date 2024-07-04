@@ -14,11 +14,13 @@ const styles = StyleSheet.create({
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
-    height: 60,
+    height: 80,
+    margin: 10,
   },
   container: {
     flex: 1,
     backgroundColor: 'black',
+    flexDirection: 'column',
   },
   customText: {
     color: 'teal',
@@ -29,13 +31,7 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          flexDirection: 'column',
-        },
-      ]}>
+    <View style={[styles.container]}>
       <View style={{flex: 1, backgroundColor: 'black'}} />
       <View style={{flex: 2, backgroundColor: 'white'}} />
       <View style={styles.buttonStyles}>

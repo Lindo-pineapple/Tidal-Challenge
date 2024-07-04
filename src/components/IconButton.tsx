@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     height: 60,
+    margin: 10,
+    bottom: 10,
   },
 });
 
