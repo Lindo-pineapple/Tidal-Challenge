@@ -1,4 +1,4 @@
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const styles = StyleSheet.create({
@@ -19,7 +19,9 @@ export default function IconButton(props: {
 }) {
   return (
     <SafeAreaView style={styles.buttonStyles}>
-      <Icon name={props.iconName} size={props.size} color={props.color} />
+      <TouchableOpacity>
+        <Icon name={props.iconName} size={props.size} color={props.color} />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
