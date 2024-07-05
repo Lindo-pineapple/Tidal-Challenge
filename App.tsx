@@ -41,7 +41,7 @@ export default function App() {
       <SongList />
       <MediaPlayerBar />
       <SafeAreaView style={styles.navStyles}>
-        <IconButton iconName="home-variant-outline" size={45} color="teal" />
+        <IconButton iconName="home-variant-outline" size={45} color="#00e6b8" />
         <IconButton iconName="youtube" size={45} color="grey" />
         <IconButton iconName="magnify" size={45} color="grey" />
         <IconButton iconName="chart-bar" size={45} color="grey" />

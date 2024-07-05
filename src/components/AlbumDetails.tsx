@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     left: 100,
   },
   artist: {
-    color: 'grey',
+    color: '#999999',
     fontSize: 18,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
@@ -73,14 +73,14 @@ const styles = StyleSheet.create({
     top: Platform.OS == 'ios' ? 10 : 0,
   },
   year: {
-    color: 'grey',
+    color: '#999999',
     fontSize: 12,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
     left: 90,
   },
   resolution: {
-    color: 'teal',
+    color: '#00e6b8',
     fontSize: 12,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
@@ -98,7 +98,7 @@ export default function MediaPlayerBar() {
         <SafeAreaView style={styles.content}>
           <Image source={imageSource} style={styles.image} />
           <Text style={styles.albumTitle}>Kanvaz</Text>
-          <Text style={styles.artist}>Album by High Klassified</Text>
+          <Text style={styles.artist}>Album by High Klassified {'>'}</Text>
           <SafeAreaView style={styles.details}>
             <Text style={styles.year}>2018</Text>
             <Text style={styles.resolution}>HIGH</Text>

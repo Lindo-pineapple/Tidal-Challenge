@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     height: 50,
-    backgroundColor: '#505050',
+    backgroundColor: '#333333',
     borderRadius: 15,
   },
   playLabel: {

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
-    backgroundColor: 'black',
+    backgroundColor: '#262626',
     height: 50,
     width: '100%',
     bottom: Platform.OS == 'ios' ? 30 : 40,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   playButtons: {
     right: 10,
     flexDirection: 'row',
-    backgroundColor: 'black',
+    backgroundColor: '#262626',
     padding: 5,
     top: 10,
   },
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     top: 5,
   },
   artistText: {
-    color: 'grey',
+    color: '#999999',
     fontSize: 15,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',

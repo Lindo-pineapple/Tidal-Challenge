@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     top: 5,
   },
   artistText: {
-    color: 'grey',
+    color: '#999999',
     fontSize: 18,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
