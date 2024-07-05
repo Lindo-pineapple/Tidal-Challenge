@@ -1,4 +1,4 @@
-import {Image, StyleSheet, View, Text} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, Text} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
@@ -46,16 +46,16 @@ const styles = StyleSheet.create({
 export default function MediaPlayerBar() {
   const imageSource = require('../../assets/images/intro.jpg');
   return (
-    <View style={styles.bar}>
+    <SafeAreaView style={styles.bar}>
       <Image source={imageSource} style={styles.image} />
-      <View style={styles.titleContainer}>
+      <SafeAreaView style={styles.titleContainer}>
         <Text style={styles.songText}>Intro (Robert Glasper x KAYTRANADA)</Text>
         <Text style={styles.artistText}>Robert Glasper Experiment</Text>
-      </View>
-      <View style={styles.playButtons}>
+      </SafeAreaView>
+      <SafeAreaView style={styles.playButtons}>
         <IconButton iconName="play" size={35} color="white" />
         <IconButton iconName="skip-next" size={35} color="white" />
-      </View>
-    </View>
+      </SafeAreaView>
+    </SafeAreaView>
   );
 }

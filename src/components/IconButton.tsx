@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const styles = StyleSheet.create({
@@ -18,8 +18,8 @@ export default function IconButton(props: {
   size: number;
 }) {
   return (
-    <View style={styles.buttonStyles}>
+    <SafeAreaView style={styles.buttonStyles}>
       <Icon name={props.iconName} size={props.size} color={props.color} />
-    </View>
+    </SafeAreaView>
   );
 }

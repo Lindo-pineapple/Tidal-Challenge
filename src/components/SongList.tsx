@@ -1,4 +1,4 @@
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, Text, SafeAreaView} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
@@ -49,20 +49,20 @@ export default function SongList(this: any) {
     {number: 2, title: 'Come Over', artist: 'High Klassified, Leaf'},
   ];
   return (
-    <View style={styles.list}>
+    <SafeAreaView style={styles.list}>
       {songs.map(song => (
-        <View style={styles.row} key={song.number}>
+        <SafeAreaView style={styles.row} key={song.number}>
           <Text style={styles.songNumber}>{song.number}</Text>
-          <View style={styles.titleContainer}>
+          <SafeAreaView style={styles.titleContainer}>
             <Text style={styles.songText}>{song.title}</Text>
             <Text style={styles.artistText}>{song.artist}</Text>
-          </View>
-          <View style={styles.options}>
+          </SafeAreaView>
+          <SafeAreaView style={styles.options}>
             <IconButton iconName="dots-horizontal" size={35} color="grey" />
-          </View>
-        </View>
+          </SafeAreaView>
+        </SafeAreaView>
       ))}
-    </View>
+    </SafeAreaView>
   );
 }
 

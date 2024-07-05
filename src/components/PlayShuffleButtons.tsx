@@ -1,4 +1,4 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import IconButton from './IconButton';
 
 const styles = StyleSheet.create({
@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
 export default function PlayShuffleButtons() {
   return (
     <SafeAreaView style={styles.buttonBarStyles}>
-      <View style={styles.buttonPlay}>
+      <SafeAreaView style={styles.buttonPlay}>
         <IconButton iconName="play" size={35} color="black" />
         <Text style={styles.playLabel}>Play</Text>
-      </View>
-      <View style={styles.buttonShuffle}>
+      </SafeAreaView>
+      <SafeAreaView style={styles.buttonShuffle}>
         <IconButton iconName="shuffle" size={35} color="white" />
         <Text style={styles.shuffleLabel}>Shuffle</Text>
-      </View>
+      </SafeAreaView>
     </SafeAreaView>
   );
 }

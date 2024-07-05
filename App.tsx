@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, SafeAreaView} from 'react-native';
+import {StyleSheet, SafeAreaView} from 'react-native';
 import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <SafeAreaView style={[styles.main]}>
-      <View style={{flex: 2, backgroundColor: 'black'}}>
+      <SafeAreaView style={{flex: 2, backgroundColor: 'black'}}>
         <AlbumDetails />
-      </View>
+      </SafeAreaView>
       <PlayShuffleButtons />
       <AlbumOptionsBar />
       <SongList />

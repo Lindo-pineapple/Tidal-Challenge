@@ -4,7 +4,6 @@ import {
   Text,
   SafeAreaView,
   ImageBackground,
-  View,
 } from 'react-native';
 import IconButton from '../components/IconButton';
 
@@ -96,10 +95,10 @@ export default function MediaPlayerBar() {
           <Image source={imageSource} style={styles.image} />
           <Text style={styles.albumTitle}>Kanvaz</Text>
           <Text style={styles.artist}>Album by High Klassified</Text>
-          <View style={styles.details}>
+          <SafeAreaView style={styles.details}>
             <Text style={styles.year}>2018</Text>
             <Text style={styles.resolution}>HIGH</Text>
-          </View>
+          </SafeAreaView>
         </SafeAreaView>
         <SafeAreaView style={styles.options}>
           <IconButton iconName="dots-horizontal" size={35} color="white" />
