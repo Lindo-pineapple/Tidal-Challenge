@@ -1,4 +1,4 @@
-import {Image, SafeAreaView, StyleSheet, Text} from 'react-native';
+import {Image, Platform, SafeAreaView, StyleSheet, Text} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     height: 50,
     width: '100%',
-    bottom: 30,
+    bottom: Platform.OS == 'ios' ? 30 : 40,
   },
   image: {
     height: 70,

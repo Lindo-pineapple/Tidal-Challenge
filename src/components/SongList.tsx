@@ -1,4 +1,4 @@
-import {StyleSheet, Text, SafeAreaView} from 'react-native';
+import {StyleSheet, Text, SafeAreaView, Platform} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     width: '100%',
-    bottom: 20,
+    bottom: Platform.OS == 'ios' ? 20 : 30,
   },
   row: {
     flexDirection: 'row',

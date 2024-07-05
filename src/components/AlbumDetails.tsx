@@ -4,21 +4,23 @@ import {
   Text,
   SafeAreaView,
   ImageBackground,
+  Platform,
 } from 'react-native';
 import IconButton from '../components/IconButton';
 
 const imageSource = require('../../assets/images/album_cover.jpg');
+const backgroundImage = require('../../assets/images/album_cover_stretched.png');
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    resizeMode: 'cover',
-    height: '100%',
+    resizeMode: 'stretch',
+    height: null,
     flexDirection: 'row',
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
-    width: '100%',
+    width: null,
     textAlign: 'center',
     margin: 10,
   },
@@ -33,30 +35,31 @@ const styles = StyleSheet.create({
   },
   content: {
     flexDirection: 'column',
-    alignContent: 'center',
+    alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     textAlign: 'center',
+    left: 20,
   },
   image: {
-    height: 230,
-    width: 230,
+    height: 250,
+    width: 250,
     margin: 20,
-    top: 30,
+    top: 10,
   },
   backButton: {
-    right: 30,
-    top: 20,
+    right: 20,
+    bottom: Platform.OS == 'ios' ? 10 : 0,
   },
   options: {
-    top: 20,
+    alignSelf: 'auto',
+    bottom: Platform.OS == 'ios' ? 10 : 0,
   },
   albumTitle: {
     color: 'white',
     fontSize: 25,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    left: 90,
-    top: 10,
+    left: 100,
   },
   artist: {
     color: 'grey',
@@ -67,6 +70,7 @@ const styles = StyleSheet.create({
   },
   details: {
     flexDirection: 'row',
+    top: Platform.OS == 'ios' ? 10 : 0,
   },
   year: {
     color: 'grey',
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
 
 export default function MediaPlayerBar() {
   return (
-    <ImageBackground source={imageSource} style={styles.container}>
+    <ImageBackground source={backgroundImage} style={styles.container}>
       <SafeAreaView style={styles.displayContent}>
         <SafeAreaView style={styles.backButton}>
           <IconButton iconName="chevron-left" size={35} color="white" />

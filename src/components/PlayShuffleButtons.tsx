@@ -1,4 +1,10 @@
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import IconButton from './IconButton';
 
 const styles = StyleSheet.create({
@@ -6,61 +12,67 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
-    backgroundColor: 'black',
     height: 80,
-    bottom: 10,
+    bottom: Platform.OS == 'ios' ? 10 : 40,
   },
   buttonPlay: {
-    paddingTop: 10,
     paddingRight: 15,
-    top: 5,
+    top: 30,
     width: '45%',
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center',
-    height: 60,
+    height: 50,
     backgroundColor: 'white',
-    borderRadius: 20,
+    borderRadius: 15,
   },
   buttonShuffle: {
     paddingRight: 15,
-    paddingTop: 10,
-    top: 5,
+    top: 30,
     width: '45%',
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center',
-    height: 60,
+    height: 50,
     backgroundColor: '#505050',
-    borderRadius: 20,
+    borderRadius: 15,
   },
   playLabel: {
-    top: 3,
+    top: 12,
+    right: 5,
     color: 'black',
     fontWeight: 'bold',
     fontSize: 20,
     fontFamily: 'AvenirLTProRoman',
   },
   shuffleLabel: {
-    top: 3,
+    top: 10,
     color: 'white',
     fontWeight: 'bold',
     fontSize: 20,
     fontFamily: 'AvenirLTProRoman',
+  },
+  Icons: {
+    top: 10,
   },
 });
 
 export default function PlayShuffleButtons() {
   return (
     <SafeAreaView style={styles.buttonBarStyles}>
-      <SafeAreaView style={styles.buttonPlay}>
-        <IconButton iconName="play" size={35} color="black" />
+      <TouchableOpacity style={styles.buttonPlay}>
+        <SafeAreaView style={styles.Icons}>
+          <IconButton iconName="play" size={30} color="black" />
+        </SafeAreaView>
         <Text style={styles.playLabel}>Play</Text>
-      </SafeAreaView>
-      <SafeAreaView style={styles.buttonShuffle}>
-        <IconButton iconName="shuffle" size={35} color="white" />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttonShuffle}>
+        <SafeAreaView style={styles.Icons}>
+          <IconButton iconName="shuffle" size={30} color="white" />
+        </SafeAreaView>
         <Text style={styles.shuffleLabel}>Shuffle</Text>
-      </SafeAreaView>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }

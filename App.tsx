@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, SafeAreaView} from 'react-native';
+import {StyleSheet, SafeAreaView, Platform} from 'react-native';
 import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
@@ -9,7 +9,6 @@ import AlbumDetails from './src/components/AlbumDetails';
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
@@ -22,6 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     height: 50,
+    bottom: Platform.OS == 'ios' ? 0 : 10,
   },
   customText: {
     color: 'white',
