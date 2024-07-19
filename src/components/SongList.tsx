@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'black',
     paddingVertical: 5,
+    bottom: 5,
   },
   titleContainer: {
     left: 20,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     top: 10,
   },
   options: {
-    top: 10,
+    top: 15,
   },
 });
 

@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     height: 80,
-    margin: 10,
-    bottom: Platform.OS == 'ios' ? 0 : 20,
+    width: '100%',
   },
   optionIcon: {
     flexDirection: 'column',
     alignContent: 'center',
     alignItems: 'center',
+    top: 10,
   },
   iconLabel: {
     color: 'white',
@@ -26,23 +26,23 @@ export default function AlbumOptionsBar() {
   return (
     <SafeAreaView style={styles.buttonStyles}>
       <SafeAreaView style={styles.optionIcon}>
-        <IconButton iconName="cards-heart-outline" size={35} color="white" />
+        <IconButton iconName="cards-heart-outline" size={32} color="white" />
         <Text style={styles.iconLabel}>Add</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.optionIcon}>
-        <IconButton iconName="information-outline" size={35} color="white" />
+        <IconButton iconName="information-outline" size={32} color="white" />
         <Text style={styles.iconLabel}>Credits</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.optionIcon}>
         <IconButton
           iconName="download-circle-outline"
-          size={35}
+          size={32}
           color="white"
         />
         <Text style={styles.iconLabel}>Download</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.optionIcon}>
-        <IconButton iconName="upload" size={35} color="white" />
+        <IconButton iconName="upload" size={32} color="white" />
         <Text style={styles.iconLabel}>Share</Text>
       </SafeAreaView>
     </SafeAreaView>
