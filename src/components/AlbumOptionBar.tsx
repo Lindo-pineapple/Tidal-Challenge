@@ -1,4 +1,4 @@
-import {StyleSheet, Text, SafeAreaView, Platform} from 'react-native';
+import {StyleSheet, Text, SafeAreaView} from 'react-native';
 import IconButton from './IconButton';
 
 const styles = StyleSheet.create({
@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     height: 80,
     width: '100%',
+    marginTop: 10,
   },
   optionIcon: {
     flexDirection: 'column',

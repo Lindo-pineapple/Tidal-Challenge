@@ -18,10 +18,8 @@ export default function IconButton(props: {
   size: number;
 }) {
   return (
-    <SafeAreaView style={styles.buttonStyles}>
-      <TouchableOpacity>
-        <Icon name={props.iconName} size={props.size} color={props.color} />
-      </TouchableOpacity>
-    </SafeAreaView>
+    <TouchableOpacity style={styles.buttonStyles}>
+      <Icon name={props.iconName} size={props.size} color={props.color} />
+    </TouchableOpacity>
   );
 }
