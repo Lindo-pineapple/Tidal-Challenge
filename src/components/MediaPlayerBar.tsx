@@ -7,39 +7,57 @@ const styles = StyleSheet.create({
     alignContent: 'space-evenly',
     justifyContent: 'space-evenly',
     backgroundColor: '#262626',
-    height: 50,
+    height: 70,
     width: '100%',
-    bottom: Platform.OS == 'ios' ? 30 : 40,
+    borderBottomWidth: 3,
+    borderBottomColor: 'gray',
   },
   image: {
-    height: 70,
-    width: 70,
-    left: 15,
+    height: '100%',
+    width: '17%',
+    left: 5,
   },
   titleContainer: {
-    left: 45,
-    top: 5,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    alignContent: 'center',
+    justifyContent: 'center',
+    height: '97%',
   },
   playButtons: {
-    right: 10,
-    flexDirection: 'row',
     backgroundColor: '#262626',
-    padding: 5,
-    top: 10,
+    alignItems: 'baseline',
+    alignContent: 'center',
+    justifyContent: 'space-around',
+    width: '23%',
+    height: '99%',
+    paddingHorizontal: 10,
+  },
+  Iconcontainer: {
+    flexDirection: 'row',
+    height: '60%',
+    width: '100%',
+    alignItems: 'center',
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
+    top: 25,
+    right: 15,
+    marginHorizontal: 10,
   },
   songText: {
     color: 'white',
     fontSize: 18,
-    fontWeight: 'semibold',
-    fontFamily: 'AvenirLTProRoman',
-    top: 5,
+    fontFamily: 'AvenirLTBlack',
+    width: '100%',
+    left: '7%',
   },
   artistText: {
     color: '#999999',
     fontSize: 15,
-    fontWeight: 'bold',
-    fontFamily: 'AvenirLTProRoman',
-    top: 5,
+    fontFamily: 'AvenirLTProHeavy',
+    width: '100%',
+    left: '7%',
   },
 });
 
@@ -53,8 +71,10 @@ export default function MediaPlayerBar() {
         <Text style={styles.artistText}>Robert Glasper Experiment</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.playButtons}>
-        <IconButton iconName="play" size={35} color="white" />
-        <IconButton iconName="skip-next" size={35} color="white" />
+        <SafeAreaView style={styles.Iconcontainer}>
+          <IconButton iconName="play" size={32} color="white" />
+          <IconButton iconName="skip-next" size={32} color="white" />
+        </SafeAreaView>
       </SafeAreaView>
     </SafeAreaView>
   );

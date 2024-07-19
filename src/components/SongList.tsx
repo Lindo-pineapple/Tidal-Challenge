@@ -1,4 +1,4 @@
-import {StyleSheet, Text, SafeAreaView, Platform} from 'react-native';
+import {StyleSheet, Text, SafeAreaView, Platform, FlatList} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     width: '100%',
     bottom: Platform.OS == 'ios' ? 20 : 30,
+    height: 150,
   },
   row: {
     flexDirection: 'row',
@@ -48,44 +49,28 @@ export default function SongList(this: any) {
     {number: 1, title: 'Stenio Keytar', artist: 'High Klassified'},
     {number: 2, title: 'Come Over', artist: 'High Klassified, Leaf'},
   ];
-  return (
-    <SafeAreaView style={styles.list}>
-      {songs.map(song => (
-        <SafeAreaView style={styles.row} key={song.number}>
-          <Text style={styles.songNumber}>{song.number}</Text>
-          <SafeAreaView style={styles.titleContainer}>
-            <Text style={styles.songText}>{song.title}</Text>
-            <Text style={styles.artistText}>{song.artist}</Text>
-          </SafeAreaView>
-          <SafeAreaView style={styles.options}>
-            <IconButton iconName="dots-horizontal" size={35} color="grey" />
-          </SafeAreaView>
-        </SafeAreaView>
-      ))}
+
+  const Song = (song: {number: number; title: string; artist: string}) => (
+    <SafeAreaView style={styles.row} key={song.number}>
+      <Text style={styles.songNumber}>{song.number}</Text>
+      <SafeAreaView style={styles.titleContainer}>
+        <Text style={styles.songText}>{song.title}</Text>
+        <Text style={styles.artistText}>{song.artist}</Text>
+      </SafeAreaView>
+      <SafeAreaView style={styles.options}>
+        <IconButton iconName="dots-horizontal" size={35} color="grey" />
+      </SafeAreaView>
     </SafeAreaView>
   );
-}
 
-{
-  /* <View style={styles.row}>
-<Text style={styles.songNumber}>1</Text>
-<View style={styles.titleContainer}>
-  <Text style={styles.songText}>Stenio Keytar</Text>
-  <Text style={styles.artistText}>High Klassified</Text>
-</View>
-<View style={styles.options}>
-  <IconButton iconName="dots-horizontal" size={35} color="grey" />
-</View>
-</View>
-
-<View style={styles.row}>
-<Text style={styles.songNumber}>2</Text>
-<View style={styles.titleContainer}>
-  <Text style={styles.songText}>Stenio Keytar</Text>
-  <Text style={styles.artistText}>High Klassified</Text>
-</View>
-<View style={styles.options}>
-  <IconButton iconName="dots-horizontal" size={35} color="grey" />
-</View>
-</View> */
+  return (
+    <SafeAreaView style={styles.list}>
+      <FlatList
+        data={songs}
+        renderItem={({item}) => (
+          <Song title={item.title} number={item.number} artist={item.artist} />
+        )}
+      />
+    </SafeAreaView>
+  );
 }

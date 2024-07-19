@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, SafeAreaView, Platform} from 'react-native';
+import {StyleSheet, SafeAreaView} from 'react-native';
 import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
@@ -9,19 +9,22 @@ import AlbumDetails from './src/components/AlbumDetails';
 
 const styles = StyleSheet.create({
   main: {
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'black',
-    width: '100%',
-    height: '100%',
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    flexWrap: 'wrap',
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
   },
   navStyles: {
     flexDirection: 'row',
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
     backgroundColor: 'black',
-    height: 50,
-    bottom: Platform.OS == 'ios' ? 0 : 10,
+    alignItems: 'baseline',
+    width: '100%',
+    height: 60,
   },
   customText: {
     color: 'white',
@@ -33,19 +36,17 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <SafeAreaView style={[styles.main]}>
-      <SafeAreaView style={{flex: 2, backgroundColor: 'black'}}>
-        <AlbumDetails />
-      </SafeAreaView>
+      <AlbumDetails />
       <PlayShuffleButtons />
       <AlbumOptionsBar />
       <SongList />
       <MediaPlayerBar />
       <SafeAreaView style={styles.navStyles}>
-        <IconButton iconName="home-variant-outline" size={45} color="#00e6b8" />
-        <IconButton iconName="youtube" size={45} color="grey" />
-        <IconButton iconName="magnify" size={45} color="grey" />
-        <IconButton iconName="chart-bar" size={45} color="grey" />
-        <IconButton iconName="account-circle-outline" size={45} color="grey" />
+        <IconButton iconName="home-variant-outline" size={38} color="#00e6b8" />
+        <IconButton iconName="youtube" size={38} color="grey" />
+        <IconButton iconName="magnify" size={38} color="grey" />
+        <IconButton iconName="chart-bar" size={38} color="grey" />
+        <IconButton iconName="account-circle-outline" size={38} color="grey" />
       </SafeAreaView>
     </SafeAreaView>
   );

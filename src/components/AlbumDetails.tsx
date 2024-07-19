@@ -15,14 +15,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     resizeMode: 'stretch',
-    height: null,
+    flexWrap: 'wrap',
+    flexBasis: 'auto',
+    flexGrow: 1,
     flexDirection: 'row',
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
     backgroundColor: 'black',
-    width: null,
+    width: '100%',
     textAlign: 'center',
-    margin: 10,
   },
   displayContent: {
     flexDirection: 'row',
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
   image: {
     height: 250,
     width: 250,
-    margin: 20,
     top: 10,
   },
   backButton: {
