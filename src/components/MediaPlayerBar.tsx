@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     height: '97%',
+    left: 5,
   },
   playButtons: {
     backgroundColor: '#262626',

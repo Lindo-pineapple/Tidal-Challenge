@@ -8,12 +8,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: 'black',
     width: '100%',
-    bottom: Platform.OS == 'ios' ? 20 : 30,
-    height: 150,
+    height: 160,
+    marginVertical: 5,
   },
   row: {
     flexDirection: 'row',
     backgroundColor: 'black',
+    paddingVertical: 5,
   },
   titleContainer: {
     left: 20,
@@ -25,11 +26,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
     padding: 10,
+    top: 10,
   },
   songText: {
     color: 'white',
+    fontWeight: 'bold',
     fontSize: 20,
-    fontFamily: 'AvenirLTProRoman',
+    fontFamily: 'AvenirLTProBlack',
     top: 5,
   },
   artistText: {
@@ -37,7 +40,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    top: 5,
+    top: 10,
   },
   options: {
     top: 20,
