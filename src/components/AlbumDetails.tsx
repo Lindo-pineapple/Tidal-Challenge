@@ -4,9 +4,9 @@ import {
   Text,
   SafeAreaView,
   ImageBackground,
-  Platform,
 } from 'react-native';
 import IconButton from '../components/IconButton';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const imageSource = require('../../assets/images/album_cover.jpg');
 const backgroundImage = require('../../assets/images/album_cover_stretched.png');
@@ -14,77 +14,80 @@ const backgroundImage = require('../../assets/images/album_cover_stretched.png')
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    resizeMode: 'stretch',
-    flexWrap: 'wrap',
-    flexBasis: 'auto',
     flexGrow: 1,
     flexDirection: 'row',
     alignContent: 'space-around',
     justifyContent: 'space-around',
-    backgroundColor: 'black',
+    backgroundColor: 'orange',
     width: '100%',
     textAlign: 'center',
   },
   displayContent: {
     flexDirection: 'row',
-    resizeMode: 'cover',
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
+    alignContent: 'space-between',
+    justifyContent: 'space-between',
     height: '100%',
     width: '100%',
     backgroundColor: '#000000d0',
   },
   content: {
     flexDirection: 'column',
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
-    textAlign: 'center',
-    left: 20,
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    top: 20,
   },
   image: {
-    height: 250,
-    width: 250,
+    height: 200,
+    width: 200,
     top: 10,
   },
   backButton: {
-    right: 20,
-    bottom: Platform.OS == 'ios' ? 10 : 0,
+    alignSelf: 'auto',
   },
   options: {
     alignSelf: 'auto',
-    bottom: Platform.OS == 'ios' ? 10 : 0,
   },
   albumTitle: {
     color: 'white',
-    fontSize: 25,
+    fontSize: 24,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    left: 100,
+    textAlign: 'center',
   },
   artist: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    bottom: 10,
+  },
+  artistText: {
     color: '#999999',
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    left: 30,
+    textAlign: 'center',
   },
   details: {
     flexDirection: 'row',
-    top: Platform.OS == 'ios' ? 10 : 0,
+    justifyContent: 'space-around',
+    alignContent: 'space-around',
+    alignItems: 'center',
+    textAlign: 'center',
+    bottom: 20,
   },
   year: {
     color: '#999999',
     fontSize: 12,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    left: 90,
   },
   resolution: {
     color: '#00e6b8',
     fontSize: 12,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    left: 120,
   },
 });
 
@@ -95,12 +98,16 @@ export default function MediaPlayerBar() {
         <SafeAreaView style={styles.backButton}>
           <IconButton iconName="chevron-left" size={35} color="white" />
         </SafeAreaView>
+
         <SafeAreaView style={styles.content}>
           <Image source={imageSource} style={styles.image} />
           <Text style={styles.albumTitle}>Kanvaz</Text>
-          <Text style={styles.artist}>Album by High Klassified {'>'}</Text>
+          <SafeAreaView style={styles.artist}>
+            <Text style={styles.artistText}>Album by High Klassified</Text>
+            <Icon name="chevron-right" size={28} color="#999999" />
+          </SafeAreaView>
           <SafeAreaView style={styles.details}>
-            <Text style={styles.year}>2018</Text>
+            <Text style={styles.year}>2018 {'      '}</Text>
             <Text style={styles.resolution}>HIGH</Text>
           </SafeAreaView>
         </SafeAreaView>

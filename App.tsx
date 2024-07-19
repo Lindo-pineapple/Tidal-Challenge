@@ -13,9 +13,9 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    flexWrap: 'wrap',
-    alignContent: 'space-around',
-    justifyContent: 'space-around',
+    alignContent: 'space-evenly',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'black',
   },
   navStyles: {
     flexDirection: 'row',

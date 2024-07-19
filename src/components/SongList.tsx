@@ -1,21 +1,21 @@
-import {StyleSheet, Text, SafeAreaView, Platform, FlatList} from 'react-native';
+import {StyleSheet, Text, SafeAreaView, FlatList} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
   list: {
     flexDirection: 'column',
-    alignContent: 'space-evenly',
-    justifyContent: 'space-evenly',
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
     backgroundColor: 'black',
     width: '100%',
     height: 160,
-    marginVertical: 5,
+    marginTop: 10,
   },
   row: {
     flexDirection: 'row',
     backgroundColor: 'black',
-    paddingVertical: 5,
-    bottom: 5,
+    alignContent: 'space-around',
+    justifyContent: 'space-around',
   },
   titleContainer: {
     left: 20,
@@ -26,8 +26,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
-    padding: 10,
-    top: 10,
+    width: '5%',
+    top: 15,
+    left: 10,
+    textAlign: 'center',
   },
   songText: {
     color: 'white',

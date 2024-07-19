@@ -1,4 +1,4 @@
-import {Image, Platform, SafeAreaView, StyleSheet, Text} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, Text} from 'react-native';
 import IconButton from '../components/IconButton';
 
 const styles = StyleSheet.create({
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   image: {
     height: '100%',
     width: '17%',
-    left: 5,
+    left: 7,
   },
   titleContainer: {
     display: 'flex',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     height: '97%',
-    left: 5,
+    left: 10,
   },
   playButtons: {
     backgroundColor: '#262626',
