@@ -43,13 +43,16 @@ const styles = StyleSheet.create({
     top: 10,
   },
   options: {
-    top: 20,
+    top: 10,
   },
 });
 
 export default function SongList(this: any) {
   const songs = [
     {number: 1, title: 'Stenio Keytar', artist: 'High Klassified'},
+    {number: 2, title: 'Come Over', artist: 'High Klassified, Leaf'},
+    {number: 2, title: 'Come Over', artist: 'High Klassified, Leaf'},
+    {number: 2, title: 'Come Over', artist: 'High Klassified, Leaf'},
     {number: 2, title: 'Come Over', artist: 'High Klassified, Leaf'},
   ];
 
@@ -61,7 +64,7 @@ export default function SongList(this: any) {
         <Text style={styles.artistText}>{song.artist}</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.options}>
-        <IconButton iconName="dots-horizontal" size={35} color="grey" />
+        <IconButton iconName="dots-horizontal" size={33} color="grey" />
       </SafeAreaView>
     </SafeAreaView>
   );
