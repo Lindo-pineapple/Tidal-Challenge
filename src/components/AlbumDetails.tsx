@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'space-around',
     justifyContent: 'space-around',
-    backgroundColor: 'orange',
     width: '100%',
     textAlign: 'center',
   },
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     height: '100%',
     width: '100%',
-    backgroundColor: '#000000d0',
+    backgroundColor: '#000000b1',
   },
   content: {
     flexDirection: 'column',
