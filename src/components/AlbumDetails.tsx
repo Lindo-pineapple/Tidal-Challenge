@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     top: 10,
+    borderRadius: 10,
   },
   backButton: {
     alignSelf: 'auto',

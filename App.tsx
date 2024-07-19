@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, SafeAreaView} from 'react-native';
-import IconButton from './src/components/IconButton';
 import MediaPlayerBar from './src/components/MediaPlayerBar';
 import SongList from './src/components/SongList';
 import AlbumOptionsBar from './src/components/AlbumOptionBar';
 import PlayShuffleButtons from './src/components/PlayShuffleButtons';
 import AlbumDetails from './src/components/AlbumDetails';
+import {NavigationContainer} from '@react-navigation/native';
+import TabBar from './src/components/BottomTabs';
 
 const styles = StyleSheet.create({
   main: {
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function App() {
+export function Main() {
   return (
     <SafeAreaView style={[styles.main]}>
       <AlbumDetails />
@@ -41,13 +42,27 @@ export default function App() {
       <AlbumOptionsBar />
       <SongList />
       <MediaPlayerBar />
-      <SafeAreaView style={styles.navStyles}>
-        <IconButton iconName="home-variant-outline" size={38} color="#00e6b8" />
-        <IconButton iconName="youtube" size={38} color="grey" />
-        <IconButton iconName="magnify" size={38} color="grey" />
-        <IconButton iconName="chart-bar" size={38} color="grey" />
-        <IconButton iconName="account-circle-outline" size={38} color="grey" />
-      </SafeAreaView>
     </SafeAreaView>
   );
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <TabBar comp={Main} />
+    </NavigationContainer>
+  );
+}
+
+{
+  /* <SafeAreaView style={styles.navStyles}>
+<IconButton iconName="home-variant-outline" size={38} color="#00e6b8" />
+<IconButton iconName="youtube" size={38} color="grey" />
+<IconButton iconName="magnify" size={38} color="grey" />
+<IconButton iconName="chart-bar" size={38} color="grey" />
+<IconButton iconName="account-circle-outline" size={38} color="grey" />
+</SafeAreaView> */
+}
+function createNativeStackNavigator() {
+  throw new Error('Function not implemented.');
 }
