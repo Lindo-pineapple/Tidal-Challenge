@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     top: 20,
   },
   image: {
-    height: 200,
-    width: 200,
+    height: 220,
+    width: 220,
     top: 10,
     borderRadius: 10,
   },
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     bottom: 10,
   },
   artistText: {
-    color: '#999999',
+    color: '#B2B2B2',
     fontSize: 17,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',

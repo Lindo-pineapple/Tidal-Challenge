@@ -53,16 +53,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-{
-  /* <SafeAreaView style={styles.navStyles}>
-<IconButton iconName="home-variant-outline" size={38} color="#00e6b8" />
-<IconButton iconName="youtube" size={38} color="grey" />
-<IconButton iconName="magnify" size={38} color="grey" />
-<IconButton iconName="chart-bar" size={38} color="grey" />
-<IconButton iconName="account-circle-outline" size={38} color="grey" />
-</SafeAreaView> */
-}
-function createNativeStackNavigator() {
-  throw new Error('Function not implemented.');
-}

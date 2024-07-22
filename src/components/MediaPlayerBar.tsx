@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: '100%',
-    width: '17%',
+    width: '18%',
     left: 7,
   },
   titleContainer: {
@@ -50,13 +50,15 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontFamily: 'AvenirLTBlack',
+    fontWeight: 'bold',
     width: '100%',
     left: '7%',
   },
   artistText: {
-    color: '#999999',
+    color: '#B3B0C3',
     fontSize: 15,
-    fontFamily: 'AvenirLTProHeavy',
+    fontFamily: 'AvenirLTProBlack',
+    fontWeight: 'bold',
     width: '100%',
     left: '7%',
   },

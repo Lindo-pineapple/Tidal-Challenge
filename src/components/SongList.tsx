@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   songNumber: {
-    color: 'grey',
+    color: '#B3B0C3',
     fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     top: 5,
   },
   artistText: {
-    color: '#999999',
+    color: '#B3B0C3',
     fontSize: 18,
     fontWeight: 'bold',
     fontFamily: 'AvenirLTProRoman',
@@ -67,7 +67,7 @@ export default function SongList(this: any) {
         <Text style={styles.artistText}>{song.artist}</Text>
       </SafeAreaView>
       <SafeAreaView style={styles.options}>
-        <IconButton iconName="dots-horizontal" size={33} color="grey" />
+        <IconButton iconName="dots-horizontal" size={33} color="#B3B0C3" />
       </SafeAreaView>
     </SafeAreaView>
   );

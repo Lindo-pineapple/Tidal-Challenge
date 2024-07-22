@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     height: 55,
-    backgroundColor: '#333333',
+    backgroundColor: '#39383E',
     borderRadius: 15,
   },
   playLabel: {
